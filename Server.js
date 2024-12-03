@@ -46,7 +46,8 @@ app.use('/api/cart',cart_router)
 app.use('/api/Payment',Payment_router)
 
 
-const PORT=4000;
+// const PORT=4000;
+const port = process.env.PORT || 4000;
 app.listen(PORT,()=>{
     console.log(`server running on ${PORT}`.red.underline)
 })
