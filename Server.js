@@ -24,7 +24,7 @@ const monogodb_URL=process.env.monogodb_URL
 
 
 // mongoose.connect('mongodb://localhost:27017/gadget').then(()=>{
-mongoose.connect(monogodb_URL).then(()=>{
+mongoose.connect(monogodb_URL,{dbName:"gadget"}).then(()=>{
     console.log(colors.bgGreen("mongodb connected successfully"))
     
 }).catch((err)=>{
